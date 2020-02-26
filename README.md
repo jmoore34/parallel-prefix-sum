@@ -22,6 +22,9 @@ my id - index of the child process (0...m)
 	    checkend:= startingposition of the next chunk in b
 	    for j<-chunkbegin to chunkend-1
 	    {
+		    compute b[j] using prefix sum algorithm
+		}
+		*wait for all other child processes to finish their ite
 
 ## Time complexity
  - O(n)							sequncial
@@ -29,6 +32,6 @@ my id - index of the child process (0...m)
  - O(logn (n/m+m))	
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkyODU1NzgxMywtMTE4MDI3NjcxMSwxND
-UxMjE4MzU0XX0=
+eyJoaXN0b3J5IjpbODIyOTIyNzUzLC0xMTgwMjc2NzExLDE0NT
+EyMTgzNTRdfQ==
 -->
