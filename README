@@ -14,11 +14,11 @@ Authors: Jonathan Moore (jtm170330), George Lu (gxl170230)
 ## Child process
 
 ## Time complexity
- - O(n)			sequncial
- - O(n/m)	cocurrent
- - O(logn (n/m + ))
+ - O(n)							sequncial
+ - O(n/m)					cocurrent
+ - O(logn (n/m+m))	
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNzQ3MDcwMTMsLTExODAyNzY3MTEsMT
-Q1MTIxODM1NF19
+eyJoaXN0b3J5IjpbMTU4MTY1NjE2NiwtMTE4MDI3NjcxMSwxND
+UxMjE4MzU0XX0=
 -->
