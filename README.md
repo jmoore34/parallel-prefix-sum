@@ -3,7 +3,6 @@ Parallel Prefix Sum
 Authors: Jonathan Moore (jtm170330), George Lu (gxl170230)
 
 Parent process
-
  1. read command line argument
  2. check for arugment errors
  3. create "large enough" shared memory segment
@@ -13,6 +12,9 @@ Parent process
  7. read the output from shared memory & write to output file
 
 Child process
+
+Time complexity
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMTU1MzUwNTgsMTQ1MTIxODM1NF19
+eyJoaXN0b3J5IjpbLTExODAyNzY3MTEsMTQ1MTIxODM1NF19
 -->
