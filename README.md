@@ -18,7 +18,10 @@ my id - index of the child process (0...m)
     {
 	    a:= starting position of the input array for iteration i
 	    b:= starting position of the output array for iteration i
-	    checkbegin:= starting positino of 'my' 
+	    checkbegin:= starting position of current process's chunk in b
+	    checkend:= startingposition of the next chunk in b
+	    for j<-chunkbegin to chunkend-1
+	    {
 
 ## Time complexity
  - O(n)							sequncial
@@ -26,6 +29,6 @@ my id - index of the child process (0...m)
  - O(logn (n/m+m))	
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MTc5MzQxMTksLTExODAyNzY3MTEsMT
-Q1MTIxODM1NF19
+eyJoaXN0b3J5IjpbLTkyODU1NzgxMywtMTE4MDI3NjcxMSwxND
+UxMjE4MzU0XX0=
 -->
