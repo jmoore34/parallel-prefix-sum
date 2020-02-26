@@ -14,7 +14,9 @@ Parent process
 Child process
 
 Time complexity
+ - List item
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExODAyNzY3MTEsMTQ1MTIxODM1NF19
+eyJoaXN0b3J5IjpbNDk1NzY3MTQxLC0xMTgwMjc2NzExLDE0NT
+EyMTgzNTRdfQ==
 -->
