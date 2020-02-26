@@ -16,7 +16,9 @@ my id - index of the child process (0...m)
 
     /*for i<-0 to [logn]-1
     {
-	    a:=starting 
+	    a:= starting position of the input array for iteration i
+	    b:= starting position of the output array for iteration i
+	    checkbegin:= starting positino of 'my' 
 
 ## Time complexity
  - O(n)							sequncial
@@ -24,6 +26,6 @@ my id - index of the child process (0...m)
  - O(logn (n/m+m))	
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE2MzgyNjc2NywtMTE4MDI3NjcxMSwxND
-UxMjE4MzU0XX0=
+eyJoaXN0b3J5IjpbLTE4MTc5MzQxMTksLTExODAyNzY3MTEsMT
+Q1MTIxODM1NF19
 -->
