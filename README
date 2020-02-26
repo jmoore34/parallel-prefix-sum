@@ -14,6 +14,9 @@ Authors: Jonathan Moore (jtm170330), George Lu (gxl170230)
 ## Child process
 my id - index of the child process (0...m)
 
+    /*for i<-0 to [logn]-1
+    {
+	    a:=starting 
 
 ## Time complexity
  - O(n)							sequncial
@@ -21,6 +24,6 @@ my id - index of the child process (0...m)
  - O(logn (n/m+m))	
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI1NDgxMDQyNywtMTE4MDI3NjcxMSwxND
+eyJoaXN0b3J5IjpbMTE2MzgyNjc2NywtMTE4MDI3NjcxMSwxND
 UxMjE4MzU0XX0=
 -->
