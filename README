@@ -12,6 +12,8 @@ Authors: Jonathan Moore (jtm170330), George Lu (gxl170230)
  7. read the output from shared memory & write to output file
 
 ## Child process
+my id - index of the child process (0...m)
+
 
 ## Time complexity
  - O(n)							sequncial
@@ -19,6 +21,6 @@ Authors: Jonathan Moore (jtm170330), George Lu (gxl170230)
  - O(logn (n/m+m))	
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU4MTY1NjE2NiwtMTE4MDI3NjcxMSwxND
+eyJoaXN0b3J5IjpbMTI1NDgxMDQyNywtMTE4MDI3NjcxMSwxND
 UxMjE4MzU0XX0=
 -->
