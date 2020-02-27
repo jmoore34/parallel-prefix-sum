@@ -27,6 +27,18 @@ int main(int argc, char** argv) {
     string outputFileName = argv[3];
     int numProcesses = stoi(argv[4]);
 
+    if (numProcesses <= 0)
+    {
+        cerr << "Number of processes must be at least 1." << endl;
+        exit(0);
+    }
+
+    if (itemCount <= 0)
+    {
+        cerr << "Number of items must be at least 1." << endl;
+        exit(0);
+    }
+
     // Set up shared memory
     // Examples used for reference:
     //  https://www.tutorialspoint.com/inter_process_communication/inter_process_communication_shared_memory.htm
