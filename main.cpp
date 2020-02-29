@@ -1,14 +1,7 @@
 #include <iostream>
-
-
-#include <sys/types.h>
 #include <unistd.h>
-#include <cstdio>
 #include <cstdlib>
 #include <fstream>
-#include <iostream>
-#include <sys/ipc.h>
-#include <sys/shm.h>
 #include <cmath>
 #include <sys/mman.h>
 
@@ -64,8 +57,8 @@ int main(int argc, char** argv) {
     const int visibility = MAP_SHARED | MAP_ANONYMOUS; // shared, but visible only to related processes
     data = (int*) mmap(NULL, memSize, access, visibility, -1, 0);
 
-
-    cout << "Shared memory size: " << memSize << endl;
+    //debug for checking created shared memory size
+    //cout << "Shared memory size: " << memSize << endl;
 
     //set up array by reading input file
     // Examples used for reference:
@@ -75,7 +68,8 @@ int main(int argc, char** argv) {
     int index = 0;
     int currentValue;
     while (infile >> currentValue) {
-        cout << "v:" << currentValue << endl;
+        //debug for checking currentValue from input file
+        //cout << "v:" << currentValue << endl;
 
         if (index >= itemCount)
         {
@@ -86,10 +80,11 @@ int main(int argc, char** argv) {
 
         data[index++] = currentValue;
     }
-    cout << "i:" << index << endl;
+    //debug for checking index value
+    //cout << "i:" << index << endl;
     if (index != itemCount) // we expect 0 plus n to equal n
     {
-        cerr << "Error: Unexpected number of numbers in input file." << endl;
+        cerr << "Error: Invalid input file." << endl;
         exit(0);
     }
 
@@ -123,24 +118,35 @@ int main(int argc, char** argv) {
 
                 getArr(iteration + 1)[k] = add + getArr(iteration)[k];
             }
-            cout << "Iteration: " << iteration << " ID: " << myIndex << " Start: " << blockStart << " End: " << blockEnd << endl;
+            //debug for checking each child processes' start and end index of for all iterations
+            //cout << "Iteration: " << iteration << " ID: " << myIndex << " Start: " << blockStart << " End: " << blockEnd << endl;
             exit(0);
         }
 
         if (myIndex == PARENT) {
             for (int i=0; i<numProcesses; ++i)
-                wait();
-            cout << "ITERATION " << iteration << endl;
+                wait(NULL);
+            //debug for which iteration and output after each iteration
+            /*cout << "ITERATION " << iteration << endl;
             for (int i=0; i<itemCount; ++i)
             {
                 cout << getArr(iteration + 1)[i] << " ";
             }
-            cout << "------------" << endl;
+            cout << "------------" << endl; */
         }
     }
 
-    for (int i=0; i<itemCount; ++i)
+    if(myIndex == -1){
+        ofstream outfile("output.txt");
+
+        for (int i=0; i<itemCount; ++i)
+        {
+            outfile << getArr(ITERATIONS)[i] << " ";
+        }
+    }
+
+    /*for (int i=0; i<itemCount; ++i)
     {
         cout << getArr(ITERATIONS)[i] << " ";
-    }
+    }*/
 }
