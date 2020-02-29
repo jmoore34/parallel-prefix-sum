@@ -1,10 +1,18 @@
 # Parallel Prefix Sum
 Authors: Jonathan Moore (jtm170330), George Lu (gxl170230)
 
+## Install instructions
+
+A. Use the prebuilt binary at cmake-build-debug/parallel_prefix_sum
+
+or 
+
+B. Run cmake in the project root (and make afterwards, if needed) to build from source.
+
 ## Parent process
 
  1. read command line argument
- 2. check for arugment errors
+ 2. check for argument errors
  3. create "large enough" shared memory segment
  4. read the input array & store it in the shared memory segment
  5. create child processes
@@ -27,12 +35,4 @@ Authors: Jonathan Moore (jtm170330), George Lu (gxl170230)
 		*wait for all other child processes to finish their iteration
 	} */
 
-## Time complexity
- - O(n)							sequncial
- - O(n/m)					cocurrent
- - O(logn (n/m+m))	
 
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ3NDk2NDI4LC0xMTgwMjc2NzExLDE0NT
-EyMTgzNTRdfQ==
--->
