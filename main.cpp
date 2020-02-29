@@ -137,8 +137,7 @@ int main(int argc, char** argv) {
     }
 
     if(myIndex == -1){
-        ofstream outfile("output.txt");
-
+        ofstream outfile(outputFileName);
         for (int i=0; i<itemCount; ++i)
         {
             outfile << getArr(ITERATIONS)[i] << " ";
