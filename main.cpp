@@ -86,7 +86,7 @@ int main(int argc, char **argv) {
     // Examples used for reference:
     //  https://www.tutorialspoint.com/cplusplus/cpp_files_streams.htm
     //  https://www.quora.com/How-does-one-read-input-until-the-end-of-file-end-of-line-in-C++
-    ifstream infile = ifstream(inputFileName);
+    ifstream infile(inputFileName);
     int index = 0;
     int currentValue;
     while (infile >> currentValue) {

@@ -9,6 +9,28 @@
           </mappings>
           <excludedPaths>
             <excludedPath local="true" path="$PROJECT_DIR$/cmake-build-debug" />
+            <excludedPath local="true" path="$PROJECT_DIR$/cmake-build-debug" />
+          </excludedPaths>
+        </serverdata>
+      </paths>
+      <paths name="CS1 (5b426fa3-58e0-4bcc-820d-c5bc726a6042)">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/tmp/tmp.CiNJQQHDHg" local="$PROJECT_DIR$" />
+          </mappings>
+          <excludedPaths>
+            <excludedPath local="true" path="$PROJECT_DIR$/cmake-build-debug" />
+            <excludedPath local="true" path="$PROJECT_DIR$/cmake-build-debug" />
+          </excludedPaths>
+        </serverdata>
+      </paths>
+      <paths name="CS2 (dcc30c27-d3ef-4630-9925-efbd97d364a1)">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/tmp/tmp.5994EcFmBJ" local="$PROJECT_DIR$" />
+          </mappings>
+          <excludedPaths>
+            <excludedPath local="true" path="$PROJECT_DIR$/cmake-build-debug" />
           </excludedPaths>
         </serverdata>
       </paths>
