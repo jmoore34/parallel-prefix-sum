@@ -13,12 +13,12 @@ using namespace std;
 int itemCount;
 int *data;
 
+
 int *getArr(int iteration) {
     return data + iteration * itemCount;
 }
 
-void doWork(int id, int iterations, int numThreads) {
-    boost::barrier rendezvous(numThreads);
+void doWork(int id, int iterations, int numThreads, boost::barrier *rendezvous) {
     for (int iteration = 0; iteration < iterations; ++iteration) {
 
         int blockSize = itemCount / numThreads;
@@ -36,7 +36,7 @@ void doWork(int id, int iterations, int numThreads) {
         //debug for checking each child processes' start and end index of for all iterations
         //cout << "Iteration: " << iteration << " ID: " << myIndex << " Start: " << blockStart << " End: " << blockEnd << endl;
 
-        rendezvous.wait();
+        rendezvous->wait();
     }
 
 }
@@ -109,13 +109,12 @@ int main(int argc, char **argv) {
         exit(0);
     }
 
-    const int PARENT = -1;
-    int myIndex = PARENT; // Process index-- which process am I (-1 is parent)
 
 
     std::thread workers[numThreads];
+    boost::barrier rendezvous(numThreads);
     for (int i = 0; i < numThreads; ++i) {
-        workers[i] = std::thread(doWork, i, ITERATIONS, numThreads);
+        workers[i] = std::thread(doWork, i, ITERATIONS, numThreads, &rendezvous);
     }
 
 
