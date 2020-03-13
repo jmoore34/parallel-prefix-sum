@@ -9,10 +9,11 @@ project(parallel_prefix_sum)
 # Packages
 # Thread package
 set(THREADS_PREFER_PTHREAD_FLAG ON)
+set(Boost_USE_MULTITHREADED ON)
 find_package(Threads REQUIRED)
 #Boost package
-FIND_PACKAGE( Boost 1.53 COMPONENTS program_options REQUIRED )
-INCLUDE_DIRECTORIES( ${Boost_INCLUDE_DIR} )
+FIND_PACKAGE( Boost 1.53 COMPONENTS program_options thread REQUIRED )
+INCLUDE_DIRECTORIES( ${Boost_INCLUDE_DIRS} )
 
 
 set(CMAKE_CXX_STANDARD 11)
@@ -20,6 +21,6 @@ set(CMAKE_CXX_STANDARD 11)
 add_executable(parallel_prefix_sum main.cpp)
 
 # Linking
-link_directories(${Boost_LIBRARY_DIRS})
+link_directories(${Boost_LIBRARY_DIRS}})
 TARGET_LINK_LIBRARIES( parallel_prefix_sum LINK_PUBLIC Threads::Threads ${Boost_LIBRARIES}  )
 
