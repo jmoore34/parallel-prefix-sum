@@ -33,8 +33,7 @@ void doWork(int id, int iterations, int numThreads, boost::barrier *rendezvous) 
 
             getArr(iteration + 1)[k] = add + getArr(iteration)[k];
         }
-        //debug for checking each child processes' start and end index of for all iterations
-        //cout << "Iteration: " << iteration << " ID: " << myIndex << " Start: " << blockStart << " End: " << blockEnd << endl;
+
 
         rendezvous->wait();
     }
@@ -79,8 +78,7 @@ int main(int argc, char **argv) {
     const int visibility = MAP_SHARED | MAP_ANONYMOUS; // shared, but visible only to related processes
     data = (int *) mmap(NULL, memSize, access, visibility, -1, 0);
 
-    //debug for checking created shared memory size
-    //cout << "Shared memory size: " << memSize << endl;
+
 
     //set up array by reading input file
     // Examples used for reference:
@@ -90,8 +88,7 @@ int main(int argc, char **argv) {
     int index = 0;
     int currentValue;
     while (infile >> currentValue) {
-        //debug for checking currentValue from input file
-        //cout << "v:" << currentValue << endl;
+
 
         if (index >= itemCount) {
             cerr << "Error: More numbers were in the file than expected." << endl;
@@ -101,8 +98,7 @@ int main(int argc, char **argv) {
 
         data[index++] = currentValue;
     }
-    //debug for checking index value
-    //cout << "i:" << index << endl;
+
     if (index != itemCount) // we expect 0 plus n to equal n
     {
         cerr << "Error: Invalid input file." << endl;
@@ -127,9 +123,4 @@ int main(int argc, char **argv) {
     for (int i = 0; i < itemCount; ++i) {
         outfile << getArr(ITERATIONS)[i] << " ";
     }
-
-    /*for (int i=0; i<itemCount; ++i)
-    {
-        cout << getArr(ITERATIONS)[i] << " ";
-    }*/
 }
