@@ -1,7 +1,11 @@
 # Parallel Prefix Sum
 Authors: Jonathan Moore (jtm170330), George Lu (gxl170230)
 
+## Installation
 
+Use of the cs1.utdallas.edu is recommended to ensure the right versions of CMake and Boost are installed.
+
+To build the project, run cmake in the main directory. A minimum CMake version of 3.11 is requried. On cs1 this is located at /usr/local/bin/cmake
 
 <!--stackedit_data:
 eyJoaXN0b3J5IjpbMTQ3NDk2NDI4LC0xMTgwMjc2NzExLDE0NT
